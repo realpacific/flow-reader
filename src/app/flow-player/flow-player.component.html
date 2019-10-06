@@ -1,0 +1,32 @@
+<div class="center-screen">
+  <h1 class="flow-text ">
+    {{flowState.currentWord}}
+  </h1>
+
+  <div class="bottom-center">
+    <ion-list lines="none">
+      <ion-item slot="start">
+        <ion-fab-button size="small">
+          <ion-icon name="remove-circle" (click)="decrementSpeed()"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button size="small">
+          <ion-icon *ngIf="flowState.state.toString()==='0' || flowState.state.toString() === '2'" name="play-circle"
+                    (click)="start(this.flowState.sentence)"></ion-icon>
+          <ion-icon *ngIf="flowState.state.toString()==='1' || flowState.state.toString() === '3'" name="pause"
+                    (click)="pause()"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button size="small" (click)="incrementSpeed()">
+          <ion-icon name="add-circle"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button size="small" (click)="restart()">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button size="small" (click)="presentPopover()">
+          <ion-icon name="arrow-dropup-circle"></ion-icon>
+        </ion-fab-button>
+      </ion-item>
+    </ion-list>
+    <app-flow-popup></app-flow-popup>
+
+  </div>
+</div>
