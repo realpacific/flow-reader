@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {FlowPlayerComponent} from './flow-player/flow-player.component';
-import {FlowPopupComponent} from './flow-popup/flow-popup.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -14,7 +13,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
   ],
   exports: [RouterModule],
-  entryComponents: [FlowPopupComponent]
+  entryComponents: [
+      // FlowPopupComponent
+  ]
 })
 export class AppRoutingModule {
 }
