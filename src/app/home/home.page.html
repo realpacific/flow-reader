@@ -1,22 +1,22 @@
 <div class="ion-padding">
-  <ion-card>
-    <ion-item class="ion-padding">
-      <ion-label position="floating">Your text here</ion-label>
-      <ion-textarea rows="6"
-                    auto-grow="true"
-                    minlength="2"
-                    required="true"
-                    [(ngModel)]="sentence"></ion-textarea>
-    </ion-item>
-    <ion-row text-center>
-      <ion-col class="ion-padding">
-        <ion-ripple-effect></ion-ripple-effect>
-        <ion-button type="submit"
-                    size="default" fill="outline" shape="round"
-                    class="ion-no-margin" (click)="startFlowReader()">SUBMIT
-        </ion-button>
-      </ion-col>
+    <ion-card>
+        <ion-item class="ion-padding">
+            <ion-label position="floating">Your text here</ion-label>
+            <ion-textarea rows="6"
+                          auto-grow="true"
+                          minlength="2"
+                          required="true"
+                          [(ngModel)]="sentence"></ion-textarea>
+        </ion-item>
+        <ion-row text-center>
+            <ion-col class="ion-padding">
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-button type="submit"
+                            size="default" fill="outline" shape="round"
+                            class="ion-no-margin" (click)="startFlowReader()">SUBMIT
+                </ion-button>
+            </ion-col>
 
-    </ion-row>
-  </ion-card>
+        </ion-row>
+    </ion-card>
 </div>
